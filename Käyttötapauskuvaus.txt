@@ -1,0 +1,53 @@
+Käyttötapauksen nimi: 
+
+Selainpohjainen äänestyssovellus, joka mahdollistaa käyttäjien:
+- äänestämään  
+- tarkastamaan äänestystilanteen
+
+sekä ylläpitäjien
+- lisäämään äänestyksiä
+- poistamaan äänestyksiä
+- tarkastamaan äänestystilanteen
+
+
+Käyttäjät: 
+
+Käyttäjinä toimivat ulkopuolinen käyttäjä (käyttäjä) ja sovellusta/järjestelmää ylläpitävä taho (ylläpitäjä)
+
+
+Laukaisija: 
+
+Tilanne, joka aiheuttaa käyttötapauksen käynnistymisen esim. aika, painikkeen painallus
+
+Äänestyssovelluksessa laukaisijana toimii painikkeen painallus, jossa käyttäjä valitsee oman alueensa (Käyttäjä/Ylläpitäjä)
+
+
+Esiehto: 
+
+Ehtona toimii asioiden tila, jotka antavat mahdollisuuden käyttötapauksen käynnistymiselle.
+
+Äänestyssovellukseen on ohjelmiston kehittäjän toimesta luotu kaksi äänestysvaihtoehtoa (default). Kaikki äänestykset näkyvät käyttäjän näkymässä valikossa "Valitse äänestys" ja äänestyksen vaihtoehdot "Valitse vaihtoehto". Äänestystilanteen käyttäjä voi valita klikkaamalla "Näytä äänestystilanne", kun jokin avoinna oleva äänestys on valittuna. 
+
+Ylläpitäjälle on annettu mahdollisuus lisätä ja poistaa "Lisää äänestys"- ja "Poista äänestys"- painikkeiden kautta, sekä tarkastaa äänestystilannetta "Näytä äänestystilanne"- painikkeesta. Ylläpitäjälle avautuu näkyviin kaikkien äänestysten äänestystilanne.  
+
+
+Jälkiehto:
+
+Ehto kuvaa onnistunutta käyttötapauksen suoritusta.
+
+Käyttäjä on päässyt tarkastamaan äänestysvaihtoehdot (valikko: "Valitse äänestys" ja "Valitse vaihtoehto"), onnistunut äänestämään (painike: "Äänestä") ja näkee myös äänestystilanteen (painike: "Näytä äänestystilanne"). 
+Ylläpitäjä on päässyt lisäämään äänestyksiä (painike: "Lisää äänestys"), poistamaan äänestyksiä (painike: "Poista äänestys") ja näkemään kaikkien äänestysten tilanteen (painike: "Näytä äänestystilanne")
+
+
+Käyttötapauksen kulku:
+
+Kulku kuvaa onnistunutta suoritusta.
+
+Käyttäjä selaa äänestyksiä, valitsee äänestyksen ja äänestää. Ääni rekisteröidään muuttujaan "option" ja äänimäärää kasvatetaan äänestysten mukaan. Käyttäjällä ja ylläpitäjällä on mahdollisuus nähdä äänestytilanne.
+
+
+Poikkeuksellinen toiminta:
+
+Tapahtumia, jotka estävät onnistuneen suorituksen.
+
+Tilanne voi syntyä mm. verkon yhteysongelmista, ohjelmiston kehittäjän tekemästä virheestä -> puutteellisen testauksen vuoksi jäänyt jokin ohjelmointivirhe huomiotta, ylläpio päivittää äänestyksiä. Sovellus on lukittu muutostöiden ollessa käynnissä

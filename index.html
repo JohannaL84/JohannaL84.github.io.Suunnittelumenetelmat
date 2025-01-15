@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Äänestyssovellus</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            background-color: #343a40;
+            color: white;
+        }
+        h2 {
+            color: royalblue;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+        .btn-dark {
+            background-color: #495057;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Äänestyssovellus</h1>
+        <p class="text-center py-3">Valitse alta roolisi</p>
+            <div id="user-section">
+
+                <h2>Käyttäjä</h2>
+                    <div id="vote-form">
+                    <label for="poll">Valitse äänestys:</label>
+                    <select id="poll" class="form-control mb-3" onchange="updateOptions()">
+                        <option value="fruits">Suosikki hedelmä</option>
+                        <option value="seasons">Suosikki vuodenaika</option>
+                    </select>
+                    <label for="option">Valitse vaihtoehto:</label>
+                    <select id="option" class="form-control mb-3">
+                        <!-- Vaihtoehdot päivitetään JavaScriptilla -->
+                    </select>
+                    <button class="btn btn-dark mb-3" onclick="submitVote()">Äänestä</button>
+                    <button class="btn btn-dark mb-3" onclick="showUserResults()">Näytä äänestystilanne</button>
+            </div>
+            <div id="user-results" class="mt-3"></div>
+        </div>
+        <div id="admin-section" class="mt-5">
+
+                <h2>Ylläpitäjä</h2>
+
+                <div id="admin-controls">
+                    <button class="btn btn-dark mb-3" onclick="addPoll()">Lisää äänestys</button>
+                    <button class="btn btn-dark mb-3" onclick="removePoll()">Poista äänestys</button>
+                    <button class="btn btn-dark mb-3" onclick="showAdminResults()">Näytä äänestystilanne</button>
+                </div>
+            <div id="admin-results" class="mt-3"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
